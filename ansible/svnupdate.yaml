@@ -1,0 +1,22 @@
+---
+- name: SVN_update
+  hosts: text
+
+  tasks:
+    - name: SVN_update
+      shell:
+        chdir: /etc/svn/cloud-platform
+        cmd: svn update
+    - name: sleep 10s
+      shell: sleep 10s
+    - name: svn_info
+      shell: 
+        chdir: /etc/svn/cloud-platform
+        cmd: svn info
+        register: svnoutput
+        with_items:
+          - "stdout_lines"
+    - name: show debug
+      debug:
+        msg: "{{ svnoutput }}"
+        

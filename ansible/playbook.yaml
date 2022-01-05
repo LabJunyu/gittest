@@ -1,0 +1,12 @@
+---
+- hosts: text
+  tasks:
+          #task1
+          - name: test connection
+            ping:
+            register: message
+
+          #task2
+          - name: print debug message
+            debug:
+               msg: "{{ message }}"

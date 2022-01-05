@@ -1,0 +1,10 @@
+- hosts: text
+  #remote_user: root
+  tasks:
+   - name: ifconfig
+     shell: ifconfig
+   #- name: sleep 10s
+   #  shell: sleep 10s
+   #- name: acx status
+   #  shell: service acx status
+

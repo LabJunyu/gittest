@@ -1,0 +1,15 @@
+---
+- hosts: text
+  gather_facts: false
+  tasks:
+    #task1
+  - name: ifconfig
+    command: 
+      cmd: cd /home/svn/
+      #    register: message
+    
+    #task2
+    #  - name: print massage
+    #    debug:
+    #      msg: "{{message}}"
+       
